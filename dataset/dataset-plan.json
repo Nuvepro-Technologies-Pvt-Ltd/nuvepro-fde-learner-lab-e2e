@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "fde-dataset-plan/1",
+  "node": "D0",
+  "plannerVersion": "fde-dataset-planner/8",
+  "profile": "lending-intake-reconciliation",
+  "profileRule": "validated-lending-intake-specification",
+  "problemSha256": "dfe62880cb2e76731179f21341965b56079dd592c441e855ecba662eef0cd25c",
+  "templateReferences": [
+    {
+      "domain": "lending",
+      "documentType": "salary_slip",
+      "jurisdiction": "IN",
+      "sourceSha256": "65f56fab53c02d625825ba8d464761f7da980dce6b37fceda518de79789baa41",
+      "rasterSha256": [
+        "58dbd0891838aee91fb5243de773113fe2f0fa5858c8ff5a57d6fa32ab23172c"
+      ]
+    },
+    {
+      "domain": "lending",
+      "documentType": "bank_statement",
+      "jurisdiction": "IN",
+      "sourceSha256": "f64e4bfb540ceafb5a5d276cd44a40b85addd244a0bb666968e7d865a3a521e8",
+      "rasterSha256": [
+        "0b64e3dc4281512439f81d230ea9115740bb309d66295e8762f481b34ddc2401"
+      ]
+    },
+    {
+      "domain": "lending",
+      "documentType": "identity_document",
+      "jurisdiction": "IN",
+      "sourceSha256": "63f7bb588591d5de20acf8367fc78ecc660ec4334b009af7f76ef16c0cad0fbc",
+      "rasterSha256": [
+        "5b15c7180b3d64b084e1c35a32299e19a8cd0dfdc838991514bfc1ae4ef8a28d"
+      ]
+    }
+  ],
+  "modality": "hybrid",
+  "visionRequired": true,
+  "rationale": "The signed lending problem requires document-completeness and scan-quality practice using realistic linked PDF artifacts.\nAssumptions: All people, employers, accounts, identifiers and values are synthetic\nEvaluation: PDF readability; field extraction; missing-page detection; cross-document income reconciliation; review routing\nConstraints: Read-only; no automated eligibility decision; preserve source provenance",
+  "learnerArtifacts": [
+    {
+      "kind": "case-index",
+      "name": "Linked application document index",
+      "filename": "dataset/application-index.csv",
+      "mimeType": "text/csv",
+      "count": 1,
+      "purpose": "Maps every synthetic income document to its loan application, product and declared document type."
+    },
+    {
+      "kind": "case-table",
+      "name": "LoanTrak keyed values",
+      "filename": "dataset/loantrak-keyed-values.csv",
+      "mimeType": "text/csv",
+      "count": 1,
+      "purpose": "Synthetic system-of-record values to reconcile against the application documents."
+    },
+    {
+      "kind": "event-log",
+      "name": "Learner-safe loan intake events",
+      "filename": "dataset/workflow-events.ndjson",
+      "mimeType": "application/x-ndjson",
+      "count": 1,
+      "purpose": "Pre-decision events for APP evaluation cases plus a distinct HIST synthetic baseline. APP underwriting outcomes remain assessor-only."
+    },
+    {
+      "kind": "source-map",
+      "name": "Evaluation contract and coverage",
+      "filename": "dataset/evaluation-contract.json",
+      "mimeType": "application/json",
+      "count": 1,
+      "purpose": "Learner-safe condition counts, row semantics, metric formulas and expected prototype output schema; application-level answers remain private."
+    },
+    {
+      "kind": "template-provenance",
+      "name": "Template sources and limitations",
+      "filename": "dataset/template-provenance.json",
+      "mimeType": "application/json",
+      "count": 1,
+      "purpose": "Immutable source/raster hashes, domain and reuse limitations for every document format."
+    },
+    {
+      "kind": "scanned-document",
+      "name": "Linked income-document packets",
+      "filename": "dataset/applications/*/*.pdf",
+      "mimeType": "application/pdf",
+      "count": 150,
+      "purpose": "Template-based synthetic income documents grouped into application packets with visible scan-quality variation."
+    }
+  ],
+  "assessorArtifacts": [
+    {
+      "kind": "event-log",
+      "name": "Private planted-condition truth",
+      "filename": "dataset/assessor-sidecar.json",
+      "mimeType": "application/json",
+      "count": 1,
+      "purpose": "Hidden expected extractions, defects, and outcomes for independent evaluation."
+    }
+  ]
+}

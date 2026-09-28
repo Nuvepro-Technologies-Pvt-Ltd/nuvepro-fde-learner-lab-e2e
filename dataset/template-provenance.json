@@ -1,0 +1,95 @@
+{
+  "templates": [
+    {
+      "node": "template-node/1",
+      "documentType": "salary_slip",
+      "jurisdiction": "IN",
+      "sourceUrl": "https://github.com/paalamugan/employee-payslip-generator/blob/be606344280bc998e95d45a36c8563ca91a0fb1e/pdf-templates/templates/standard-payslip.pug",
+      "sourceSha256": "65f56fab53c02d625825ba8d464761f7da980dce6b37fceda518de79789baa41",
+      "referencePackId": "f0173b8ccd201f301d7a3e5a135e55ed1afdc122bc7dbd04342ecee28e628110",
+      "rasterSha256": [
+        "58dbd0891838aee91fb5243de773113fe2f0fa5858c8ff5a57d6fa32ab23172c"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "limitations": [
+        "Structure adapted from Employee Payslip Generator, copyright (c) 2020 Paalan, MIT License.",
+        "Synthetic local evaluation only; commercial packaging requires a separate distribution review."
+      ],
+      "usage": "local-review-only",
+      "domain": "lending"
+    },
+    {
+      "node": "template-node/1",
+      "documentType": "bank_statement",
+      "jurisdiction": "IN",
+      "sourceUrl": "https://github.com/AyonPal/bank-statement-pdf-parser/blob/c781b5fd41126dedc124dd9e5bc80016038bea5b/samples/pdfs/meridian-salary-account-feb-2026.pdf",
+      "sourceSha256": "f64e4bfb540ceafb5a5d276cd44a40b85addd244a0bb666968e7d865a3a521e8",
+      "referencePackId": "650082051bee5b1a60ce0339d2a061f389688ed4a9e8ae593202b4622dc92801",
+      "rasterSha256": [
+        "0b64e3dc4281512439f81d230ea9115740bb309d66295e8762f481b34ddc2401"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "limitations": [
+        "Structure adapted from the AyonPal bank-statement-pdf-parser synthetic sample, MIT License.",
+        "Synthetic local evaluation only; commercial packaging requires a separate distribution review."
+      ],
+      "usage": "local-review-only",
+      "domain": "lending"
+    },
+    {
+      "node": "template-node/1",
+      "documentType": "identity_document",
+      "jurisdiction": "IN",
+      "sourceUrl": "https://www.rbi.org.in/commonman/Upload/English/Notification/PDFs/06FIC010714FL.pdf",
+      "sourceSha256": "63f7bb588591d5de20acf8367fc78ecc660ec4334b009af7f76ef16c0cad0fbc",
+      "referencePackId": "ffb51f2471e21c498c9729fa55b68f036c2be4716ee840df5eff2384fe4f21d4",
+      "rasterSha256": [
+        "5b15c7180b3d64b084e1c35a32299e19a8cd0dfdc838991514bfc1ae4ef8a28d"
+      ],
+      "sourcePages": [
+        139
+      ],
+      "limitations": [
+        "The RBI source establishes document anatomy only; original pixels and real identities are not copied into generated artifacts.",
+        "Synthetic local evaluation only; commercial redistribution requires separate review."
+      ],
+      "usage": "local-review-only",
+      "domain": "lending"
+    }
+  ],
+  "derivedLayouts": [
+    {
+      "documentType": "pan_card",
+      "sourceUrl": "https://incometaxindia.gov.in/Booklets%20%20Pamphlets/18__PAN__English.pdf",
+      "supports": [
+        "PAN",
+        "full name",
+        "father or guardian name",
+        "date of birth",
+        "gender",
+        "photo area",
+        "signature area",
+        "QR area",
+        "digital signature area"
+      ],
+      "reuseBasis": "Official Income Tax Department e-PAN specimen used only to reconstruct document anatomy; no logos, source pixels, valid QR data or real identifiers are reproduced."
+    },
+    {
+      "documentType": "aadhaar_card",
+      "sourceUrl": "https://uidai.gov.in/images/Aadhaar_Handbook_2021_LR.pdf",
+      "supports": [
+        "masked Aadhaar number",
+        "name",
+        "date of birth",
+        "gender",
+        "photo area",
+        "secure QR area"
+      ],
+      "reuseBasis": "Official UIDAI handbook sample used only for structural anatomy and the masked-number convention; logos, source pixels, real QR data and real identities are not reproduced."
+    }
+  ]
+}

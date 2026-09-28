@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "fde-lab-package/1",
+  "runId": "d0435e00-7582-4aa2-b318-ae50fa18e7ab",
+  "problemStatementHash": "670c3cd7c31fce271201451fe296577814f0954086f451ee99d8d10a0b8b85ad",
+  "title": "Central Document Verification Salary-Slip Rejections",
+  "sourceEstate": "run53-rajesh-pan-aadhaar-flow",
+  "learnerFileCount": 157,
+  "applicationCount": 30,
+  "bootstrap": ".nuvepro/bootstrap.sh",
+  "readinessReceipt": ".nuvepro/readiness.json",
+  "starter": "app/main.py"
+}

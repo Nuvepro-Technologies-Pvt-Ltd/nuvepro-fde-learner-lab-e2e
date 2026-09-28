@@ -1,0 +1,1119 @@
+{
+  "schemaVersion": "fde-dataset-public-manifest/2",
+  "node": "D1",
+  "generatorVersion": "fde-dataset-node/6",
+  "sourceRunId": "53",
+  "profile": "lending-intake-reconciliation",
+  "profileRule": "validated-lending-intake-specification",
+  "modality": "hybrid",
+  "visionRequired": true,
+  "filename": "application-index.csv",
+  "rowCount": 30,
+  "rowUnit": "application",
+  "documentCount": 150,
+  "columns": [
+    "application_id",
+    "document_id",
+    "document_filename",
+    "declared_document_type",
+    "upload_channel",
+    "product"
+  ],
+  "artifacts": [
+    {
+      "kind": "case-index",
+      "filename": "dataset/application-index.csv",
+      "mimeType": "text/csv",
+      "encoding": "utf8",
+      "sha256": "390599636a3e595e21a3959decedaf24dda9a1be4ae9755c87643e6b1fd8e010"
+    },
+    {
+      "kind": "case-table",
+      "filename": "dataset/loantrak-keyed-values.csv",
+      "mimeType": "text/csv",
+      "encoding": "utf8",
+      "sha256": "0ca8811b4b3a12b8ff5a40e58bc2e22fba076cd914de45e1f62d5d88f1368ced"
+    },
+    {
+      "kind": "event-log",
+      "filename": "dataset/workflow-events.ndjson",
+      "mimeType": "application/x-ndjson",
+      "encoding": "utf8",
+      "sha256": "c475922ccd66a6e38cf98054f9dea0e3662a2db410f69c2325fdbbdc46da2f69"
+    },
+    {
+      "kind": "source-map",
+      "filename": "dataset/evaluation-contract.json",
+      "mimeType": "application/json",
+      "encoding": "utf8",
+      "sha256": "fc4f4dde5d1990851c143c6a5950f2008eea5bb58f810c85a17d11457287baa6"
+    },
+    {
+      "kind": "template-provenance",
+      "filename": "dataset/template-provenance.json",
+      "mimeType": "application/json",
+      "encoding": "utf8",
+      "sha256": "c0cacc18c672d7fe08406703845b8b118fdb41c4eadc8799cef81de28c591906"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0001/app-0001-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "945f7fed1058e3208d0eec54d6919faf354ab1a5a26ec3465226aa1022b2dce3"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0001/app-0001-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "cf2d607e04e3787c33acc6ea2362642f8d68f5ed0f6c79dec3f11024be02f94f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0001/app-0001-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "51502a187bc88857fb016f737eefcc72d1e8b3deda57bd86fbcc7610ec1a3e64"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0001/app-0001-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "841d67bad4ad097650447b6e3cc5e924043e07a5e58b703a27c0b3abf4e40454"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0001/app-0001-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c1f536ae1679183598c3d8eb27f37b916ad9d72bcff20572d207914367d79545"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0002/app-0002-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "1f1f565523e344ee198c9755274b98a70679b2e1fd47a48c6c7af5cc8e9d0ecb"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0002/app-0002-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4e0cb7204c3c86305aa07dbb1677ddb5e0cc37fa13ce25979bc39233cdd907e4"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0002/app-0002-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "5028ef8ddc760b5ea291a53d114036168494a8b4d8f2ac147d6dd18d6e36bc04"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0002/app-0002-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "766bfe263cd571a53e5004047745f02f617a3a4d4c92f6f55cb3aa0e5c20ccbc"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0002/app-0002-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "10722b97136773a8ea3fd36ecad2a2fb30c0fa67990a6439ab242ddd6082be82"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0003/app-0003-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "e7be38a21316cb9776bf6a0bcfa2d78a8b59a92a3868ed215beb5230db034f4d"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0003/app-0003-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "962bc71578c2e3de1f5f7f1dc73dab0faf75ea31af07d6edca834c77f8dc6005"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0003/app-0003-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "0d4676d10912883e029a6a89032989e82417dcd5334a18a85a6b3590c30514c7"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0003/app-0003-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6f7ea31b6f706bd19be45f2b942d87000e3d39ade6de038c68d5b904aa05d496"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0003/app-0003-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "308bde4393bde1efb543eb4f3271ed2a8c3d151ea30082fcbf6039fae8bf5040"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0004/app-0004-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "ac106347bfb765e217387b2994520a00fae518cea569b3538f2907a849fc7428"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0004/app-0004-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "7289df5fe3853015518b56b07ffb247804040f00ac1913d5a5f10d9702ce9cb0"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0004/app-0004-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "34413680488f90a169ea9475897d6edcc25745bce1e10e25afc577a9bfe4c530"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0004/app-0004-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "b8219523ae40b2f74ddeace19bdad337ac84d953e7e998b46b5cd7d4b0dc5233"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0004/app-0004-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "33a9539260a7b5be5b0965a5613c0a4aecdca446eeedc66e7f57a1b1f78a889c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0005/app-0005-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "cbc15416965734294aa0df6eed01a3fb42d726ae9fefd8af0e9bd7fc57526fb7"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0005/app-0005-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "176d6afe5f5725582fad9e24999fbd616a82cf6e43ff37406bc772436261556c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0005/app-0005-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "357a7c203ad0575118e47c3298ca01a64a695935b2fcdabd72ad20d892c6c814"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0005/app-0005-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "bb4dd92ae47e5ac0817e73814b846ac9a0230f53e2c8dd11527eabd9a67ba578"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0005/app-0005-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "82bcbb19cae1d199794c8c5683219cef997fd7087f6b573e5c6e7769540ba036"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0006/app-0006-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6a8efdfcea255fe604bd6a7fb84206179303a77a07d92b2e8146a28a53957168"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0006/app-0006-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "02f9f1fd76a7e5acad0d47a9767e35eab95f2837516dce4ad6f882d624927a37"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0006/app-0006-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "0557f833deb55fa1d4954f9465acd377ae200965201602b6db0210f7ce284155"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0006/app-0006-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "9aebe66bb3447703eaf163cf8ed8a3ea930bd9c93528bf2dff161fc6796d27ce"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0006/app-0006-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8cafe3a6e3a16627724fd9301c203e986a87f77db7f25e0403ba92a4744295bb"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0007/app-0007-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "01a54dfa8256cc03d199ddfa798b7bc019a60118c4fa6e07a34875b43280da96"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0007/app-0007-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "91ab4f37f55286e3b7767a149c292a8aafdc20e9538d74356178eb2aca8ca7b6"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0007/app-0007-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "452da32a70045115101202389ba5429c8dedfca232234429eb5086328d4cc554"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0007/app-0007-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "18c5fa2f499e5cc8d2b30c0cfa1ffd9488e34d5f6e3cc6ee279b927e2788c63b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0007/app-0007-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f5e1dac604959645c8d4bf041d2965bb123e4a5790a9b9ecf84c113fe9419e32"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0008/app-0008-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8887ce8ec0ee5c62bbe88193c195c9e67396bfb44736f84019b490f61f660193"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0008/app-0008-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "fe40be74942b14c866112da7c191dbf29457ab1fbbcaa60cb4233e02777c4488"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0008/app-0008-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "be77f718ee2b9532ffa1885486d4a5da347edbfdb46d2a3e0d15f3ce90139514"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0008/app-0008-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "401d62df9814298739f88dbfe0f8902092d1d4ab542b7935ef31e6b10bdbb622"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0008/app-0008-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f12237d638c2cad4c6621776997afacb745b1cbdcf4cd70345ed5b34738af65c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0009/app-0009-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "20182f5b721573e54ee2e6f39746047d1d0272bdd3a07081ad4e815be29d8b97"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0009/app-0009-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d0a705243513770a10e5b3d118798c426711ad78ea5843151a18e93df2f162e8"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0009/app-0009-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "ef7e86654e96fe8b7d019fb6b93b4745aafc9505d5b81565efba3719050dcba5"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0009/app-0009-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "2a0e15c86d3fc707ac4e6a589eab35a18ac4c501f65bee41f2ea8d4ab7b4b593"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0009/app-0009-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "0fda5e7dd3c73542cf75acce04239906bc9a9b1e7b5021f76e59c3144ced8d6a"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0010/app-0010-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "096ab2fab1b41111294bfcde6de0082726cf6f2291eccc840d1ea41545465509"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0010/app-0010-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c0e698b3b7c79837ebc8411bd02b3e098940384f540f8a374c7b5cde3d1df6e4"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0010/app-0010-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "35eadc52f7a7b55974673b2cefc252fa21e50666a2cdd2bdd30db79027b6247f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0010/app-0010-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "e7fcb3489a49677a38ad11f7dcae9d11707b73ae9f9365f6d654cf50a58adc4b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0010/app-0010-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "a64da6715f93714aa7933611f271646352a33a439777e834548651f88ddc4efe"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0011/app-0011-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8e317f339fe4f286a4e54fd5a3ea35f98990902420ced8dbf7444c7fabbeaba1"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0011/app-0011-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "53b61ec4c6a5b8793ab9483bcb0894252fdeaa7f16c81bfb09f037e82eafd180"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0011/app-0011-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "dba6b0c4755d2e105543e13e804334ca781cf0d2405fce90652837f6ae8de122"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0011/app-0011-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "9a54c8cc82865678a7e79e3eac7bff2420a2b7804aaf706903804e98454645e1"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0011/app-0011-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f7adcd701241eb8b57989c6b4a8be20ddd6ecd105e9d223462bd579ca3a65301"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0012/app-0012-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "2e1b29d407840b0dc0b7211446a4e72c93176a6147578edf636fc396abe0a740"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0012/app-0012-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "65506c0dfdbee887a0f8927a4efc4e14844759a4ffc001347c7c37be3f63f48c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0012/app-0012-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "da83d28afa2d2f3b9d464c93f10321e928679d14e9141c8633cfcfa8bc92b69c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0012/app-0012-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d2a02bd7c3c5585d658981dd3fd01410f6a157c33601ea927dc40a4f509505fc"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0012/app-0012-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "49a43191f7ab24b6311c9651eb69f582e853a07d81241e4ea9d38ccb0217f8be"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0013/app-0013-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6d99472959b354b4aa5786666839b6eaab5c17b43993a60fa60554a87b643f2c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0013/app-0013-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "de80fa722a32156248f6bde357ce5ac7d67f83b8504e8fdfd22d6315800c9b5d"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0013/app-0013-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "91ac375430a1256230b987958f092ba2888c1d9ad679cd5dadca6f1ba4709f88"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0013/app-0013-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "b5dab6374ff307e17273eafc4be1f4fcbf4202ff7734d3218333c24a5736eadf"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0013/app-0013-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "1ccd054f04f6d402364759b08d1bf1a976dbeb63b7295fc3aeba44bbe5e51a8b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0014/app-0014-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f2a715a6d8312a5b87bb01e691bb7a74b44b4aa4afcf698b594c08815eb70c88"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0014/app-0014-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d2d23cbcf14541dba97806ccd433b73aeca8e6935cb6b06a8b709fc7afc78abe"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0014/app-0014-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "55c8a922fcf09cbc3eed2befd68826be6720924cd53fe2956780884316b8e1e2"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0014/app-0014-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d32f63ba3412ccd6f9e2e73211556eeb887915c5b06afb4fca5fa9bd175d2125"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0014/app-0014-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d22f5fac5bd08f7fe5e925226f7c1d7133620cbc3ef83f5e158c9135b8ba06b2"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0015/app-0015-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "b7938903afe6591ca67de9549baaa95c4df2d131dc49be3b61e4242a35081c4b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0015/app-0015-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c721f443c095310047f4edb802ed1b17d05ad4ba9811f763dd2728ba402f398f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0015/app-0015-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c8719ba888cbedcb263c9f473c03d82a8f9d92882ad8b1be34cd48ad0738bfe6"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0015/app-0015-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c29977ba86034bc18160ce7ce2882838bb220276674df86a4e4fa82baad268cc"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0015/app-0015-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "5eb3cdacc7535f888d0621d7dd68ad1f2829e08a66d9351fdc2df4832d27139b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0016/app-0016-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4942f5c93246f5b88faa7208f47f3607f0dc20d09bf3dd828aca027c06c047e3"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0016/app-0016-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "79c24fae4b3a5eab3a70264286bd6d4f28a0856b2547815cdb1a70fc5916d29f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0016/app-0016-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "00a95b67a078901c80e2f202669b056d700e8bd8ec01dc3dfc27d52943caf66e"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0016/app-0016-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "0010823466d1a6fcce829c96e18f673fe3a8aaa956139814792dc2327abb379f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0016/app-0016-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "0cc404bddcf0e2ed83d222501746d8545f3195309771ecca18a69f309b6aec03"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0017/app-0017-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4acf2be1abbe094356023ec6a8a5fa6a7155c9a1e4c0eebca2fb5f9f3f979dd6"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0017/app-0017-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4c74f6351f8d41407eb590258245badc68210e29a5ea013cadd5f4abd9feda6a"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0017/app-0017-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4d3c0e5aef8c23ce95815133694e8df7bceccf17f091a9289c1aefb4551f2c0b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0017/app-0017-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "18d6fa4eabf341085ba8b55e1f05da58437856527272fb37e9495c94d4f0cc4e"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0017/app-0017-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "46731741e97353e069a95093a4c3c8a0d814b147e85ca28252f0f5d48a2bf586"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0018/app-0018-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6b337c90f05f7425b7a1f17dec03afddcf8430933f6fae97e691d41ac0a226bd"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0018/app-0018-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c4c99ff6167424fe17f97bde4012ea516fdfed22c5b90eda77151e927c393af2"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0018/app-0018-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c21d9affa7847646d925b28db016ecf0f01ddbee4ed81427ec86d3a13fbd84c9"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0018/app-0018-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "1b8624a29e0b2a4e129aaa474a1c5774477717504d4326f43c5b19d78bd1b1c1"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0018/app-0018-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f526353180633db64c1c7a7a9f0747131d4cc6e77fbd43067bf39080318d9f68"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0019/app-0019-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "cac13f79b51605a170bfca5d0b3b47dfcbe2aef75d87d08579c606aae57a44a6"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0019/app-0019-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "5bca70a8b2ac49afceed1180d340b3884e5d908768637e4b4019855fed685b8a"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0019/app-0019-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8acacd1ad1d4288a7341eaa50a21271af37aba160a21347ce8d7aad63ec4981a"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0019/app-0019-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "21303552cf3fe604442e77248602916395e2c5697bf2c718e2453f6850d32a28"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0019/app-0019-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6f65ac108356b3c244c668a401b121157c6cf29ecafc445ca871b3fe9662b9e2"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0020/app-0020-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f0882e10f0c331e02d863ba67de4ac5db945aebc29b98084b663e017462e9df7"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0020/app-0020-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "04b45939fc8df3b345d4774b34077e445ed3218b4532a21f8f7d92fe5b23b622"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0020/app-0020-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "636167f1143440c8a656f132a19762c06acfbdab2e8238e66f25e4c7fff960b1"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0020/app-0020-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "a623fb03226af6e96e2d41fab5d9fbc60725bbcafa85d829d7db3599b2043980"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0020/app-0020-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4a9b5554eabb1bbce05d4e6c78293c5a50c1610998319af89fc26c3acd29d710"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0021/app-0021-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d2b4960a73339eea3297bcaadce48d8d111e46d21c8a0fedd99a5232c5ba8fdf"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0021/app-0021-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "aafd9c798d2a72fcf930891e1f491f520bfe2cad202ff48be7881e8f34a54ad7"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0021/app-0021-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "20cc16b4e2ffb6b6a8e9a311b0604f0e0307ede6583ddbd7883036ee2c60bd51"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0021/app-0021-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "71768f3d00643f037833f53789193e80a5593200b4297a653b1642080b32d48f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0021/app-0021-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "3bf0fdff14bf554f62e80c75774d7eb0c30a510e8c015af2136229e495f80f24"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0022/app-0022-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "98774e977413dd2301ce7f9631707ccc7892fadafa8ba0f164cbc7d815e0fd92"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0022/app-0022-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6fa9ad5c40c45eeaa20d1aed5e52c98e905ffaa775c1c1d33861f5b37f161edb"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0022/app-0022-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "23a231bc3083203e8ff4a407c024120586ec78ee7634cf3e884fd8957940b379"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0022/app-0022-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6255cd381071e82ab508a043cce69913d663e147c85c18acecdd687482c9def5"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0022/app-0022-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "9e64ce4a5bba798b33600c2478f842b1d7bf75cf18f5c915c3f83996d297e557"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0023/app-0023-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "beb7868c567176b6fa31cf52e113fc31372c52d015296cbdedbd95df8b32bd2d"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0023/app-0023-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "cc092893065b2e944d4dd37b13e7df6e520e89e588193c0de6dee9ac4b31c1f1"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0023/app-0023-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "136a8a54e031bff19e63781b2f544f17422945543694d23aa859303ddc161a8e"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0023/app-0023-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "70bd9427bbba4f090abb0f94c3b019dd4582e5887f1ab4976e4a7bad9621cd7f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0023/app-0023-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d710731b32d72242a096749d72f318ae4c7111f18181f9b6f71d769bec597930"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0024/app-0024-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "44b0faa180bc6fea545e72d41f5414a1a1762d26f6b2466d1e8870dc10f2d537"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0024/app-0024-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8006bc3e4be329e976776cf4141663186f257d92671b49228a548f4d6aeabee3"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0024/app-0024-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "149899b7487d7d4fe4de9a1581661a5a9d60a07b5167cd0564ff21b676f6402c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0024/app-0024-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "2fc7147f64c0a75870cc522297fd8484b052c3ad7321a744c0422825901e0c3c"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0024/app-0024-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d4561798a8a6a5112f31e90af79c01c89be001c98ebcce6cf92ac3d1bc9ce392"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0025/app-0025-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "7c1b2a1dba3b3b6d8528c3ac1105aa03ecfd629cf88b25905d44451285dd288e"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0025/app-0025-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "34f1bd412f22789b0209b868d0cfdd02cc6c07c72314701f886ea3f6ae38e29b"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0025/app-0025-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "67819da44114f35a1e920ffc74417fb39021d37e579450a78f3f293de240f16f"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0025/app-0025-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "be430cb2e0250a998fe9c6d5740f907919e26f14601689fbfd46dcd2c93f8d39"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0025/app-0025-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "1945b1d07f7e3985478349c46345a2b4f4bb54db16a47bd29a46f23c29042251"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0026/app-0026-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "27ea86ab812726bbda964eb8894eb729735e5a3668fe8f09a6b2e569df84e48d"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0026/app-0026-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "e72f424168ff3d9a5c7e09cd02b976b62b2dc28f5bea1ef3f8512f77ab42aa42"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0026/app-0026-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "77f5159821b42b0ff3d530d225649a9c901837f79f9e0c1bb7840f9b48f36941"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0026/app-0026-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "669408499cf69f0d9d88bd02ae6261d2bf0a9e3038e311370997c573bd96b929"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0026/app-0026-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d838e48db17346fb93358a3ad21498f192011e6e70c9c1e0e194f667c512d7cf"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0027/app-0027-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "090ba099e25de6b0f691c32e3865acf11b3b785df3a8fc62cad21e54ac899ecf"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0027/app-0027-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "6ca99d0e6bfffbcdc069648805680648a52f44937bc562c1a8996f047f7cf550"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0027/app-0027-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "3061c4da79d4a3faf9f7073626e886462b0c991f69a2e5376c1d99422bff5829"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0027/app-0027-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "d201ecf3d70539ba5d550ebee4bb0b03d132f53d386e1fb3ee2dcf4f95281e37"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0027/app-0027-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "c66f2d7bb40c6cab6ebf8ceeda51ae283ebb693e8735fc56bedc38c5e8ec0705"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0028/app-0028-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "b27c75d0847f1a0dcb97b2d5f6b4b8a20af88261220331b9ee483057e72e3cad"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0028/app-0028-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "2e1f63524090e1a3a6db9727f2b899d6018abdd0b4b2f5d2b19be503ce1dd7f8"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0028/app-0028-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "512e94cf2f938d3d2c19591fce1e45fba8bf3a7aaf62f9ecd5362f788f5eb876"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0028/app-0028-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "8f1807085b11bbdf16ad47caf6cc42e7db27a5c2168e5eda8530b53d0fa62171"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0028/app-0028-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "738a794b91084f650f27923839b75d9198fc0370bd69484e03056cbc0417a45e"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0029/app-0029-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "65ec7fa2674736d1c32713c29335ff128bc2c8b89aa66a9adeb089b224cb8836"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0029/app-0029-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "01bf9d1f0f917ceb2ba5533e27d912ba2ae7eda27f377d37e5ad0f348bb17f6a"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0029/app-0029-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "79c89af383080b8132ac184ad4e7b6d08354639eb498a1deedb38a4f76db79f3"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0029/app-0029-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "610fb5d64028a1c94a0becbec7faa1e5b71b4477a8a7d551aec0a0754771ee39"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0029/app-0029-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "f75c7e217e99c60d427bb951ed24876580e65f3e48d8fda4c4e454097682c675"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0030/app-0030-doc-01-salary_slip.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "524038e1ee7f959c1c1b77e6597a6c87afc9111b49485452925dc4e9f3034255"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0030/app-0030-doc-02-bank_statement.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "3171bf4a185c5cd418df41b5b01b3e410c45e3463e5cf0a24685f4e5f729cfe4"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0030/app-0030-doc-03-pan_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "fc4cb306936525d0b065e030b60bd873fe4d951e9d41cf5c4cec962037ec29b8"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0030/app-0030-doc-04-aadhaar_card.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "4bc965d7231f28611a94e66bdc2098e53466bf25de977905252eb036e5332133"
+    },
+    {
+      "kind": "scanned-document",
+      "filename": "dataset/applications/app-0030/app-0030-doc-05-passport_photo.pdf",
+      "mimeType": "application/pdf",
+      "encoding": "base64",
+      "sha256": "57a4a8137d6cf17b27b1c7851f29d1d482246e09e12e8e8536ad32c41d73082a"
+    }
+  ],
+  "learnerSafe": true,
+  "privateFieldsExcluded": [
+    "failure_class",
+    "should_escalate",
+    "expected_label",
+    "assessor_rationale"
+  ],
+  "problemSha256": "dfe62880cb2e76731179f21341965b56079dd592c441e855ecba662eef0cd25c",
+  "datasetSha256": "ebcf388c5e91a28a1757c1ae8814a752d8e28ad6c4eba288255a1f30c6136be9",
+  "artifactSetSha256": "ff3daf10fd8963ba6d790341e01afbfe9e3f7e58b886d8106a247211681699b3"
+}

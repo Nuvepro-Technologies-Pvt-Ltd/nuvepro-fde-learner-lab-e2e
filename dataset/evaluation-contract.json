@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "fde-lending-evaluation-contract/2",
+  "jurisdiction": "IN",
+  "asOf": "2026-09-12",
+  "freshnessDays": 90,
+  "rowUnit": "application",
+  "caseCount": 30,
+  "documentCount": 150,
+  "cleanControlCount": 22,
+  "conditionCoverage": {
+    "missing_page": 1,
+    "unreadable": 1,
+    "stale_document": 1,
+    "ytd_income_mismatch": 1,
+    "pay_frequency_mismatch": 1,
+    "pay_period_mismatch": 1,
+    "cropped": 1,
+    "mislabeled_document": 1
+  },
+  "renderingSemantics": {
+    "unreadable": "faint",
+    "missing_page": "missing_page",
+    "cropped": "cropped",
+    "stale_document": "usable document with an out-of-window document date",
+    "ytd_income_mismatch": "usable documents whose extracted income differs from keyed system data",
+    "pay_frequency_mismatch": "usable salary slip whose visible frequency differs from keyed system data",
+    "pay_period_mismatch": "usable salary slip whose visible pay-period end differs from keyed system data",
+    "mislabeled_document": "usable rendered salary slip whose learner-visible upload index declares bank_statement"
+  },
+  "syntheticBaselineKickbackRate": 0.26666666666666666,
+  "workflowPartitions": {
+    "evaluationInput": {
+      "applicationIdPrefix": "APP-",
+      "caseCount": 30,
+      "outcomes": "assessor-only"
+    },
+    "historicalBaseline": {
+      "applicationIdPrefix": "HIST-",
+      "caseCount": 30,
+      "kickbackCount": 8,
+      "outcomes": "learner-visible synthetic calibration data"
+    }
+  },
+  "tatClock": {
+    "baseline": "application_completed.at - application_submitted.at without clock resets",
+    "targetReductionHours": 24,
+    "countsWeekends": true,
+    "note": "For this synthetic lab, one business day is represented as 24 continuous elapsed hours so kickbacks cannot hide time through clock resets. Production business-calendar reporting remains a separate observed shadow-run view."
+  },
+  "requiredPrototypeOutput": [
+    "application_id",
+    "route",
+    "extracted_monthly_income",
+    "extracted_pay_frequency",
+    "confidence",
+    "reasons"
+  ],
+  "routeSemantics": {
+    "allowedValues": [
+      "underwriting",
+      "processor-review"
+    ],
+    "effect": "advisory-only",
+    "prohibitedActions": [
+      "approve",
+      "reject",
+      "write-back"
+    ],
+    "note": "A route requests the next human review stage; it never makes a lending decision."
+  },
+  "prototypeEvidenceRequirements": [
+    "application_submitted",
+    "processor_touch",
+    "processor_review_started",
+    "processor_review_completed",
+    "prototype_intake_completed",
+    "underwriting_kickback",
+    "application_completed"
+  ],
+  "metrics": {
+    "fieldExtractionAccuracy": "correct extracted monthly-income and pay-frequency fields / all contracted extraction fields; scored against assessor-only document truth",
+    "firstPassYield": "applications routed to the correct next stage without a later kickback / all applications; scored against assessor-only route truth",
+    "processorTouches": "prototype uses one bounded intake touch per application; baseline comparator is assessor-only workflow truth",
+    "processorReviewTimeMinutes": "processor_review_completed.at - processor_review_started.at in minutes; compare observed prototype events to assessor-only baseline workflow truth",
+    "trueTatHours": "application_completed.at - application_submitted.at without clock resets",
+    "falseClearRate": "processor-review truth predicted as underwriting / processor-review truth",
+    "falseFlagRate": "underwriting truth predicted as processor-review / underwriting truth",
+    "postPrototypeKickbackRate": "review-required applications incorrectly cleared to underwriting / all applications",
+    "validationRecall": "review-required applications routed to processor-review / all actual review-required applications, reported by issue class"
+  },
+  "scoring": {
+    "fieldExtractionAccuracy": {
+      "implementation": "code-owned",
+      "formula": "correct_extracted_fields / all_contracted_extraction_fields",
+      "fields": [
+        "extracted_monthly_income",
+        "extracted_pay_frequency"
+      ],
+      "truthSource": "assessor-only document truth",
+      "targetMinimum": 0.95
+    },
+    "falseClearRate": {
+      "implementation": "code-owned",
+      "formula": "false_clears / actual_review_required",
+      "truthSource": "assessor-only route truth"
+    },
+    "falseFlagRate": {
+      "implementation": "code-owned",
+      "formula": "false_flags / actual_underwriting",
+      "truthSource": "assessor-only route truth"
+    },
+    "processorTouchDelta": {
+      "implementation": "code-owned",
+      "formula": "observed_prototype_processor_touches - baseline_processor_touches",
+      "observedSource": "prototype workflow event log",
+      "baselineSource": "assessor-only workflow truth",
+      "targetMaximum": 0
+    },
+    "processorReviewTimeDeltaMinutes": {
+      "implementation": "code-owned",
+      "formula": "observed_prototype_processor_review_minutes - baseline_processor_review_minutes",
+      "observedSource": "prototype workflow event log",
+      "baselineSource": "assessor-only workflow truth",
+      "targetMaximum": 0
+    },
+    "postPrototypeKickbackRate": {
+      "implementation": "code-owned",
+      "formula": "observed_underwriting_kickbacks / all_applications",
+      "observedSource": "prototype workflow event log",
+      "truthSource": "assessor-only route truth",
+      "targetMaximumExclusive": 0.2
+    },
+    "trueTatDeltaHours": {
+      "implementation": "code-owned",
+      "formula": "observed_prototype_true_tat_hours - baseline_true_tat_hours",
+      "observedSource": "prototype workflow event log",
+      "baselineSource": "assessor-only workflow truth",
+      "appliesTo": "review-required applications",
+      "targetPopulation": "review-required applications",
+      "targetMaximum": -24
+    },
+    "firstPassYield": {
+      "implementation": "code-owned",
+      "formula": "correct_routes / all_applications",
+      "truthSource": "assessor-only route truth"
+    },
+    "validationRecall": {
+      "implementation": "code-owned",
+      "formula": "true_positive_review_flags / actual_issue_applications",
+      "truthSource": "assessor-only route and condition truth",
+      "groupBy": "issue_class"
+    }
+  },
+  "warning": "Synthetic coverage validates workflow mechanics only. TAT, touch-count and post-prototype kickback targets are evaluated only from observed shadow-run events; this dataset does not assume or claim those improvements."
+}
