@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -43,7 +44,9 @@ for path in learner_files:
 if any(count != manifest["applicationCount"] for count in document_types.values()):
     raise SystemExit(f"document coverage mismatch: {document_types}")
 
-revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+revision = os.environ.get("NUVEPRO_PACKAGE_REVISION")
+if not revision:
+    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 receipt = {
     "schemaVersion": "fde-lab-readiness/1",
     "problemStatementHash": manifest["problemStatementHash"],
