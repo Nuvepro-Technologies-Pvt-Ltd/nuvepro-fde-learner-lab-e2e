@@ -44,7 +44,7 @@ def home() -> str:
     rows = "".join(f"<li><strong>{key}</strong>: {value}</li>" for key, value in details.items())
     return f"""<!doctype html><html><head><title>FDE Learner Lab</title>
     <style>body{{font:16px system-ui;max-width:900px;margin:48px auto;padding:0 24px}}code{{background:#eee;padding:2px 6px}}</style>
-    </head><body><h1>Document Verification Salary-Slip Defect Identification</h1>
+    </head><body><h1>Income Documentation Rework and Turnaround Delays</h1>
     <p>This sandbox is bound to the learner-approved problem statement. The complete synthetic learner corpus is under <code>dataset/</code>.</p>
     <ul>{rows}</ul><p>Implement the prototype in <code>app/</code>. Start the supplied API with <code>~/Desktop/start-fde-lab.sh</code>.</p>
     </body></html>"""
