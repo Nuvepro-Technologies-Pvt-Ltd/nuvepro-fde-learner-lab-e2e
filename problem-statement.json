@@ -1,0 +1,197 @@
+{
+  "runId": "c7df7564-124b-4f45-b969-e5ee3a8acc46",
+  "candidateHash": "e57763a1452e5ce5eae489572f513072f1fd28290ebacf7ac54e634d0ce46f61",
+  "stage": "problem_statement",
+  "approvedProblemStatement": {
+    "title": "Application Send-Back Ping-Pong and Manual Data Entry Bottleneck",
+    "problem": {
+      "statement": "Applications repeatedly bounce between central underwriting and branch operations due to manual data entry and trivial document discrepancy flags, inflating actual turnaround time.",
+      "evidenceQuote": "Roughly 30% of all submitted applications get sent back to branch operations for document re-verification. When a file gets bounced, it easily adds days to the cycle."
+    },
+    "v1Scope": [
+      {
+        "statement": "Core retail salaried income and identity pack verification covering bank statements, payslips, PAN cards, Aadhaar cards, and applicant photographs.",
+        "evidenceQuote": "For a first pilot, keep it strictly to the core retail income and identity pack."
+      }
+    ],
+    "confidence": "high",
+    "outOfScope": [
+      {
+        "statement": "Property title deeds, legal search reports, technical valuation papers, and miscellaneous declarations.",
+        "evidenceQuote": "Do not touch property title deeds, legal search reports, technical valuation papers, or miscellaneous customer declarations."
+      }
+    ],
+    "constraints": [
+      {
+        "statement": "Using raw customer PII triggers a lengthy six-week InfoSec review, whereas masked data or synthetic test packs reduce review time to one week.",
+        "evidenceQuote": "If a solution requires ingestion of raw, live customer PII—unmasked Aadhaar numbers, PANs, actual account statements—the security and data privacy review will easily take about six weeks. That’s assuming no red flags. However, if we can run an initial validation or pilot using masked data or synthetic test packs, that review drops to about one week."
+      },
+      {
+        "statement": "The solution must function alongside existing LendSuite workflows without major IT architectural changes due to a freeze until Q4.",
+        "evidenceQuote": "IT has frozen major changes until Q4, so any tool or process has to sit alongside our current workflow without requiring a massive architectural overhaul."
+      }
+    ],
+    "requirements": [
+      {
+        "statement": "The solution must reduce trivial document-related send-backs while maintaining credit risk standards.",
+        "evidenceQuote": "But if we can knock down those document-related send-backs by 20% to 25% without letting risky files slip through, that would be massive."
+      },
+      {
+        "statement": "The verification logic must be fully explainable and maintain an auditable trail showing why documents are accepted or flagged.",
+        "evidenceQuote": "The system has to clearly show why a document was accepted or why an anomaly was flagged. We can't have a \"black box\" telling an underwriter a file is fine without showing the underlying reconciliation."
+      }
+    ],
+    "affectedUsers": [
+      {
+        "statement": "Central processing unit underwriters who spend hours re-keying data and handling trivial discrepancies.",
+        "evidenceQuote": "First, my underwriters at the central processing unit. Instead of actually evaluating credit risk, they spend hours every day squinting at PDFs and re-keying data from bank statements and payslips into LendSuite."
+      },
+      {
+        "statement": "Branch operations staff who must repeatedly chase applicants and agents for clarification and revised documents.",
+        "evidenceQuote": "Second, the branch operations staff. They bear the brunt of it because they have to chase the customer or the DSA (Direct Selling Agent) for fresh documents, explanations, or revised letters."
+      },
+      {
+        "statement": "Direct Selling Agents (DSAs) whose turnaround times are delayed, leading to frustration and lost deals.",
+        "evidenceQuote": "And ultimately, the DSAs get furious. If a file sits in re-verification for three or four days, the DSA is on the phone screaming at my branch managers, or worse, taking that borrower to another NBFC down the street."
+      }
+    ],
+    "openQuestions": [
+      "What specific synthetic test data packs or masking methods are approved by internal InfoSec for the one-week review pathway?",
+      "How should the side-by-side reconciliation tool integrate or interface operationally with underwriters using LendSuite?"
+    ],
+    "currentProcess": [
+      {
+        "statement": "Sales executives collect physical KYC and income documents, scan them, and upload them to LendSuite.",
+        "evidenceQuote": "The sales executive collects physical KYC and income papers, scans them, and uploads them to LendSuite."
+      },
+      {
+        "statement": "Underwriters manually transcribe data line by line from unstructured scans into LendSuite assessment screens.",
+        "evidenceQuote": "So, my underwriters spend roughly two hours every single day just manually re-keying data—line by line—from scanned bank statements and payslips into our assessment screens."
+      },
+      {
+        "statement": "Underwriters flag minor anomalies or mismatches and reject the file back to the branch, stopping and resetting the system clock.",
+        "evidenceQuote": "Every time an underwriter rejects a file back to the branch for document re-verification, the system stops the clock. When the branch re-uploads and resubmits it, the system resets the clock to zero."
+      }
+    ],
+    "successMeasures": [
+      {
+        "statement": "Reduce document-related send-backs by 20% to 25%.",
+        "evidenceQuote": "But if we can knock down those document-related send-backs by 20% to 25% without letting risky files slip through, that would be massive."
+      },
+      {
+        "statement": "Reduce real turnaround time (TAT) by at least one full day.",
+        "evidenceQuote": "It would pull our real TAT down by at least a full day and clear a huge amount of friction with our DSAs."
+      }
+    ],
+    "systemsAndArtifacts": [
+      {
+        "statement": "LendSuite loan origination system / assessment screens.",
+        "evidenceQuote": "LendSuite doesn't extract data cleanly from unstructured scans."
+      },
+      {
+        "statement": "Scanned PDFs of KYC and income documents.",
+        "evidenceQuote": "Instead of actually evaluating credit risk, they spend hours every day squinting at PDFs and re-keying data from bank statements and payslips into LendSuite."
+      },
+      {
+        "statement": "LendSuite MIS reports reflecting underwriting TAT.",
+        "evidenceQuote": "If you pull our MIS report from LendSuite, it’ll tell you our approval TAT is a respectable 3.2 days."
+      }
+    ],
+    "documentRequirements": [
+      {
+        "name": "Bank statements",
+        "purpose": "Verify salary credits, cash flow, and banking history for underwriting assessment.",
+        "lifecycle": [
+          "collected",
+          "scanned",
+          "uploaded",
+          "manually re-keyed",
+          "reviewed"
+        ],
+        "sourceForms": [
+          "scanned copies uploaded to LendSuite"
+        ],
+        "evidenceQuote": "Bank statements (usually 3 to 6 months of savings/salary accounts)",
+        "relationships": [
+          "cross-referenced with payslip employer and net pay",
+          "cross-referenced with PAN identity"
+        ],
+        "knowledgeStatus": "stakeholder-confirmed",
+        "requiredContent": [
+          "salary credit narration",
+          "account holder name",
+          "transaction dates"
+        ],
+        "observedProblems": [
+          {
+            "category": "cross-document-conflict",
+            "description": "Variations in salary credit narration dates or employer names cause underwriters to flag false income anomalies.",
+            "evidenceQuote": "Then there are salary narration quirks, or someone's pay crediting on the 3rd instead of the 1st because of a bank holiday. The underwriter flags it as an income anomaly, bounces the file, and asks for an HR confirmation letter."
+          }
+        ]
+      },
+      {
+        "name": "Payslips",
+        "purpose": "Verify employment and monthly earnings.",
+        "lifecycle": [
+          "collected",
+          "scanned",
+          "uploaded",
+          "manually re-keyed",
+          "reviewed"
+        ],
+        "sourceForms": [
+          "scanned copies uploaded to LendSuite"
+        ],
+        "evidenceQuote": "Payslips (latest 3 months)",
+        "relationships": [
+          "reconciled against bank statement credit transactions"
+        ],
+        "knowledgeStatus": "stakeholder-confirmed",
+        "requiredContent": [
+          "employer name",
+          "salary amount"
+        ],
+        "observedProblems": [
+          {
+            "category": "cross-document-conflict",
+            "description": "Discrepancies between employer name on payslip and narration on bank statements trigger unwarranted rejections.",
+            "evidenceQuote": "Or employer names: the payslip says \"TCS Ltd\" but the bank credit narration says \"Tata Consultancy Services Salary\"."
+          }
+        ]
+      },
+      {
+        "name": "PAN card",
+        "purpose": "Verify taxpayer identity.",
+        "lifecycle": [
+          "collected",
+          "scanned",
+          "uploaded",
+          "reviewed"
+        ],
+        "sourceForms": [
+          "scanned copies uploaded to LendSuite"
+        ],
+        "evidenceQuote": "PAN cards",
+        "relationships": [
+          "reconciled against bank statement account holder name"
+        ],
+        "knowledgeStatus": "stakeholder-confirmed",
+        "requiredContent": [
+          "applicant name"
+        ],
+        "observedProblems": [
+          {
+            "category": "format-variation",
+            "description": "Minor name variations between PAN and bank statement lead to false blocks.",
+            "evidenceQuote": "For instance, minor name variations between the PAN and the bank statement—like initials expanded, or an extra middle name."
+          }
+        ]
+      }
+    ],
+    "documentOpenQuestions": [
+      "What specific fields from Aadhaar cards and applicant photographs are checked or cross-referenced during underwriting?",
+      "Are digital e-statements directly available from applicants, or are all bank statements strictly scanned physical papers?"
+    ]
+  }
+}
